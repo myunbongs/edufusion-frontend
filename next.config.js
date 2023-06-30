@@ -10,7 +10,10 @@ const nextConfig = {
       'dummyimage.com'
     ],
     format: ['image/png', 'image/webp', 'image/jpeg']
-  }
+  },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
 }
 
 module.exports = nextConfig

@@ -14,7 +14,7 @@ const Recap = () => {
                 <Typical
                 steps={[result]}
                 loop={1}
-                wrapper="div"/>
+                wrapper="p"/>
             </div>
             <Link href="/" className="btn-project">
             다시하기

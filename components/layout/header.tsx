@@ -38,7 +38,6 @@ export default function Header() {
                 <Box>
                     <Link href="/">
                         <Image src="/logo.png" width={180} height={180} alt={""}/>
-                        {/* <span className="ml-3 text-xl">EduFusion</span> */}
                     </Link>
                 </Box>
                 <HStack as={'nav'} spacing={4} display={{ base: 'none', md: 'flex' }}>
@@ -47,7 +46,7 @@ export default function Header() {
                     ))}
                     <DarkModeToggleButton />
                 </HStack>
-                <IconButton size={'md'} icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
+                <IconButton size={'md'} bg="indigo.500" icon={isOpen ? <CloseIcon /> : <HamburgerIcon />} aria-label={'Open Menu'} display={{ md: 'none' }} onClick={isOpen ? onClose : onOpen} />
             </Flex>
 
             {isOpen ? (

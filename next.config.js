@@ -2,6 +2,15 @@
 
 const nextConfig = {
   reactStrictMode: true,
+  async rewrites() {
+    return [
+        {
+          source: '/:path*',
+          destination: process.env.HOST + ':path*' 
+        },
+    ]
+  },
+
   images: {
     domains: [
       'www.notion.so',
@@ -10,10 +19,7 @@ const nextConfig = {
       'dummyimage.com'
     ],
     format: ['image/png', 'image/webp', 'image/jpeg']
-  },
-  eslint: {
-    ignoreDuringBuilds: true,
-  },
+  }
 }
 
 module.exports = nextConfig

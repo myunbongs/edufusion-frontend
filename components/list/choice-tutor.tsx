@@ -10,7 +10,7 @@ export default function ChoiceTutor() {
             <p className="text-gray-500 text-xl mt-2">서울디지털재단 마스코트</p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 text-xl mt-6 mb-4"></span>
             <p className="leading-relaxed mb-2">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <Link href="/list" className="btn-project mt-5">
+            <Link href="/feature-list" className="btn-project mt-5">
                     선택
             </Link>
             </div>
@@ -22,7 +22,7 @@ export default function ChoiceTutor() {
             <p className="text-gray-500 text-xl mt-2">EduFusion 튜터 1</p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 text-xl mt-6 mb-4"></span>
             <p className="leading-relaxed mb-2">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <Link href="/list" className="btn-project mt-5">
+            <Link href="/feature-list" className="btn-project mt-5">
                     선택
             </Link>
             </div>
@@ -34,7 +34,7 @@ export default function ChoiceTutor() {
             <p className="text-gray-500 text-xl mt-2">EduFusion 튜터 2</p>
             <span className="inline-block h-1 w-10 rounded bg-indigo-500 text-xl mt-6 mb-4"></span>
             <p className="leading-relaxed mb-2">Edison bulb retro cloud bread echo park, helvetica stumptown taiyaki taxidermy 90's cronut +1 kinfolk. Single-origin coffee ennui shaman taiyaki vape DIY tote bag drinking vinegar cronut adaptogen squid fanny pack vaporware.</p>
-            <Link href="/list" className="btn-project mt-5">
+            <Link href="/feature-list" className="btn-project mt-5">
                     선택
             </Link>
             </div>

@@ -7,6 +7,10 @@ import Celebration from "./celebration";
 
 const Quiz = () => {
     const {query} = useRouter();
+    const [currentQuestion, setCurrentQuestion] = useState(0);
+    const [selectedOptions, setSelectedOptions] = useState([]);
+    const [end, setEnd] = useState(false);
+
     let result = null; 
 
     if ( !query.result ) {
@@ -16,10 +20,6 @@ const Quiz = () => {
     }
 
     let quizList = Object.values(result); 
-
-    const [currentQuestion, setCurrentQuestion] = useState(0);
-    const [selectedOptions, setSelectedOptions] = useState([]);
-    const [end, setEnd] = useState(false);
 
     interface QuizProps {
         o1: string; 

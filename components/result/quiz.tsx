@@ -7,7 +7,7 @@ import Celebration from "./celebration";
 
 const Quiz = () => {
     const {query} = useRouter();
-    let result = JSON.parse(query.result); 
+    let result = JSON.parse(query.result as string); 
     let quizList = Object.values(result); 
 
     const [currentQuestion, setCurrentQuestion] = useState(0);

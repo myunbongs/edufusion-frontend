@@ -9,8 +9,13 @@ import Loading from "../list/loading";
 
 const Debat = () => {
     const {query} = useRouter(); 
-    const result = JSON.parse(query.result);
     const router = useRouter();
+
+    if ( !query.result ) {
+        return
+    }else{
+        const result = JSON.parse(query.result);
+    }
 
     const [running, setRunning] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);

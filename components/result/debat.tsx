@@ -17,7 +17,7 @@ const Debat = () => {
     if ( !query.result ) {
         return
     }else{
-        const result = JSON.parse(query.result);
+        const result = JSON.parse(query.result as string);
     }
     
     const handleSubmit = async (event) => {

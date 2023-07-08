@@ -6,6 +6,7 @@ import DebatInput from "../input/debat-input";
 import { useState } from "react";
 import axios from "axios";
 import Reply from "./reply";
+import Loading from "../list/loading";
 
 const Debat = () => {
     const {query} = useRouter(); 
@@ -108,6 +109,10 @@ const Debat = () => {
                 </form>
             </div>
             </div>
+
+            {running && (
+            <Loading />
+            )}
     </>)
 }
 

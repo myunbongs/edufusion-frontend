@@ -107,7 +107,7 @@ const Quiz = () => {
         {end && (<>
         <div className="w-full flex flex-col items-center justify-center">
             <Celebration />
-            <div className="mt-16 border-2 rounded-lg border-gray-200 border-opacity-50 p-8 text-xl mb-16">
+            <div className="w-full mt-16 border-2 rounded-lg border-gray-200 border-opacity-50 p-8 text-xl mb-16">
                 모든 퀴즈가 끝났습니다! 축하합니다 🎉
             </div>
             <Link href="/" className="btn-project">

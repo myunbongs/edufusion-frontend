@@ -5,6 +5,7 @@ import { useState } from "react";
 import Debat from "./debat";
 import Link from "next/link";
 import QnAInput from "../input/qna-input";
+import Loading from "../list/loading";
 
 const QnA = () => {
     const router = useRouter();
@@ -91,6 +92,10 @@ const QnA = () => {
                 </form>
             </div>
             </div>
+
+            {running && (
+            <Loading />
+            )}
     </>)
 }
 

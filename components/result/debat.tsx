@@ -14,12 +14,8 @@ const Debat = () => {
     const [errorMsg, setErrorMsg] = useState(null);
     const [response, setResponse] = useState(null); 
 
-    if ( !query.result ) {
-        return
-    }else{
-        const result = JSON.parse(query.result as string);
-    }
-    
+    const result = JSON.parse(query.result as string);
+
     const handleSubmit = async (event) => {
         event.preventDefault()
 

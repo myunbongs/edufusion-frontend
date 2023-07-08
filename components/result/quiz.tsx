@@ -25,7 +25,7 @@ const Quiz = () => {
 
     const optionList = ['o1', 'o2', 'o3', 'o4']; 
 
-    const quizs: QuizProps[] = quizList; 
+    const quizs: QuizProps[] | any[] = quizList; 
 
     const handleNext = () => {
         const nextQues = currentQuestion + 1;

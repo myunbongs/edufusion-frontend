@@ -6,7 +6,7 @@ import lottieJson from '../../public/loading-animation.json'
 
 const Loading = () => {
     return(<>
-        <div className="fixed top-0 left-0 right-0 w-full min-h-screen flex flex-col justify-center items-center bg-black opacity-70">
+        <div className="fixed top-0 left-0 right-0 w-full min-h-full flex flex-col justify-center items-center bg-black opacity-70">
         <Lottie
         loop
         animationData={lottieJson}

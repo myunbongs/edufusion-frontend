@@ -10,6 +10,18 @@
     @apply inline-flex text-white dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 hover:text-gray-100 rounded text-lg
 }
 
+.btn-option {
+    @apply inline-flex text-white items-center justify-center dark:text-white bg-indigo-500 border-0 py-2 px-6 focus:outline-none hover:bg-indigo-600 hover:text-gray-100 rounded text-lg w-full
+}
+
+.btn-wrong-option {
+    @apply inline-flex text-white items-center justify-center dark:text-white bg-red-500 border-0 py-2 px-6 focus:outline-none hover:bg-red-600 hover:text-gray-100 rounded text-lg w-full
+}
+
+.btn-answer-option {
+    @apply inline-flex text-white items-center justify-center dark:text-white bg-green-500 border-0 py-2 px-6 focus:outline-none hover:bg-green-600 hover:text-gray-100 rounded text-lg w-full
+}
+
 .project-card {
     @apply flex flex-col m-3 rounded-xl w-full
             transition duration-300 transform border border-gray-300
@@ -36,4 +48,30 @@ a {
 
 p {
     @apply text-slate-500 dark:text-slate-400
+}
+
+input[type="radio"]:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    position: relative;
+    background-color: #535353;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+input[type="radio"]:checked:after {
+    width: 24px;
+    height: 24px;
+    border-radius: 24px;
+    cursor: pointer;
+    position: relative;
+    background-color: #4F46E5;
+    content: "";
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
 }

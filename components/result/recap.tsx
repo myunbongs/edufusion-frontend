@@ -6,6 +6,7 @@ import { useRouter } from "next/router";
 const Recap = () => {
     const {query} = useRouter(); 
     const result = query.result 
+    console.log(query);
 
     return(<>
             <div className="w-full flex flex-col items-center justify-center">

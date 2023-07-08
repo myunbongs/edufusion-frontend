@@ -3,9 +3,9 @@ import Recap from "../components/result/recap";
 
 const ResultRecap = () => {
     return(<>
-    <Layout>
-        <Recap />
-    </Layout>
+        <Layout>
+            <Recap />
+        </Layout>
     </>); 
 }; 
 

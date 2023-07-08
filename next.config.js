@@ -6,7 +6,7 @@ const nextConfig = {
     return [
         {
           source: '/:path*',
-          destination: process.env.HOST + ':path*' 
+          destination: process.env.HOST + '/:path*' 
         },
     ]
   },

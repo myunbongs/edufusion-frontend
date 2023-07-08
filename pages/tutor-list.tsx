@@ -5,8 +5,8 @@ import ChoiceTutor from '../components/list/choice-tutor';
 export default function List() {
     
     return (<>
-    <Layout>
-        <ChoiceTutor />
-    </Layout>
+        <Layout>
+            <ChoiceTutor />
+        </Layout>
     </>);
 }

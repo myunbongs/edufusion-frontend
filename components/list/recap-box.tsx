@@ -8,6 +8,7 @@ const RecapBox = () => {
     const router = useRouter();
     const [running, setRunning] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);
+    const {query} = useRouter();
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -40,7 +41,8 @@ const RecapBox = () => {
                     {
                       pathname: '/result-recap',
                       query: {
-                        result: res.data.txt_result
+                        result: res.data.txt_result,
+                        name: query.name,
                       },
                     },
                     '/result-recap'

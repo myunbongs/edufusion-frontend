@@ -5,6 +5,8 @@ import axios from "axios";
 
 const DebatBox = () => {
     const router = useRouter();
+    const {query} = useRouter();
+
     const [running, setRunning] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);
 
@@ -36,13 +38,14 @@ const DebatBox = () => {
             ).then((res) => {
                 router.push(
                     {
-                      pathname: '/result-debat',
-                      query: {
-                        result: JSON.stringify(res.data)
-                      },
+                        pathname: '/result-debat',
+                        query: {
+                        result: JSON.stringify(res.data),
+                        name: query.name,
+                    },
                     },
                     '/result-debat'
-                  );
+                );
             }); 
         } catch (error) {
             console.error(error);

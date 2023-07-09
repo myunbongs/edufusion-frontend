@@ -7,6 +7,7 @@ const QuizBox = () => {
     const router = useRouter();
     const [running, setRunning] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);
+    const {query} = useRouter();
 
     const handleSubmit = async (event) => {
         event.preventDefault()
@@ -38,7 +39,8 @@ const QuizBox = () => {
                     {
                       pathname: '/result-quiz',
                       query: {
-                        result: JSON.stringify(res.data.quiz_dict)
+                        result: JSON.stringify(res.data.quiz_dict),
+                        name: query.name, 
                       },
                     },
                     '/result-quiz'

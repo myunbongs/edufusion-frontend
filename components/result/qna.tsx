@@ -9,10 +9,21 @@ import Loading from "../list/loading";
 
 const QnA = () => {
     const router = useRouter();
+    const {query} = useRouter();
+
     const [running, setRunning] = useState(false);
     const [errorMsg, setErrorMsg] = useState(null);    
     const [response, setResponse] = useState(null); 
+
+    const name = query.name as string;
     
+    function random(min,max){
+        const num = Math.floor(Math.random()*(max - min))+min;
+        return num;
+    }
+
+    let randomImg = "/" + name + "/" + String(random(0, 10)) + '.png';
+        
     const handleSubmit = async (event) => {
         event.preventDefault()
 
@@ -40,7 +51,8 @@ const QnA = () => {
                     maxContentLength: Infinity, 
                 }
             ).then((res) => {
-                setResponse(JSON.stringify(res.data));                  
+                setResponse(JSON.stringify(res.data)); 
+                randomImg = "/" + name + "/" + String(random(0, 10)) + '.png';
             }); 
         } catch (error) {
             console.error(error);
@@ -54,7 +66,7 @@ const QnA = () => {
 
     return(<>
             <div className="w-full flex flex-col items-center justify-center">
-            <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src="https://dummyimage.com/1200x800" width={1000} height={1000}/>
+            <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src={randomImg} width={1000} height={1000}/>
 
             { !response && (
                 <div className="w-full mt-8 p-6 bg-indigo-500 rounded-xl shadow-lg flex items-center space-x-4">

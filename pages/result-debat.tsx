@@ -3,9 +3,9 @@ import Debat from "../components/result/debat";
 
 const ResultDebat = () => {
     return(<>
-    <Layout>
-        <Debat />
-    </Layout>
+        <Layout>
+            <Debat />
+        </Layout>
     </>);
 }
 

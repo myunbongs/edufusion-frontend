@@ -19,6 +19,9 @@ const Quiz = () => {
         result = JSON.parse(query.result as string);
     }
 
+    const name = query.name as string; 
+
+
     let quizList = Object.values(result); 
 
     interface QuizProps {
@@ -34,8 +37,16 @@ const Quiz = () => {
 
     const quizs: QuizProps[] | any[] = quizList; 
 
+    function random(min,max){
+        const num = Math.floor(Math.random()*(max - min))+min;
+        return num;
+    }
+
+    let randomImg = "/" + name + "/" + String(random(0, 10)) + '.png';
+
     const handleNext = () => {
         const nextQues = currentQuestion + 1;
+        randomImg = "/" + name + "/" + String(random(0, 1)) + '.png';
 
         if (nextQues == quizs.length) {
             setEnd(true); 
@@ -70,7 +81,7 @@ const Quiz = () => {
             { !end && (        
             <div className="w-full flex flex-col">
             <div className="w-full flex flex-col justify-center items-center">
-                <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src="https://dummyimage.com/1200x800" width={1000} height={1000}/>
+                <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src={randomImg} width={1000} height={1000}/>
             </div>
             <div className="w-full flex flex-col">
                 <h4 className="mt-10 text-xl">Question {currentQuestion + 1} of {quizs.length}</h4>

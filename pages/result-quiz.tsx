@@ -3,9 +3,9 @@ import Quiz from "../components/result/quiz";
 
 const ResultQuiz = () => {
     return (<>
-    <Layout>
-        <Quiz />
-    </Layout>
+        <Layout>
+            <Quiz />
+        </Layout>
     </>);
 }
 

@@ -21,6 +21,15 @@ const Debat = () => {
         result = JSON.parse(query.result as string);
     }
 
+    const name = query.name as string; 
+    
+    function random(min,max){
+        const num = Math.floor(Math.random()*(max - min))+min;
+        return num;
+    }
+
+    let randomImg = "/" + name + "/" + String(random(0, 10)) + '.png';
+
     const handleSubmit = async (event) => {
         event.preventDefault()
 
@@ -50,16 +59,17 @@ const Debat = () => {
                 }
             ).then((res) => {
                 setResponse(JSON.stringify(res.data))
+                randomImg = "/" + name + "/" + String(random(0, 2)) + '.png';
                 router.push(
                     {
-                      pathname: '/result-debat',
-                      query: {
-                        result: JSON.stringify(res.data)
-                      },
+                        pathname: '/result-debat',
+                        query: {
+                        result: JSON.stringify(res.data),
+                        name: name,
+                    },
                     },
                     '/result-debat'
-                  );
-                  
+                );
             }); 
         } catch (error) {
             console.error(error);
@@ -72,11 +82,9 @@ const Debat = () => {
 
 
     return(<>
-            <div className="w-full flex flex-col items-center justify-center">
-            <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src="https://dummyimage.com/1200x800" width={1000} height={1000}/>
-
+    <div className="w-full flex flex-col items-center justify-center">
             { !response && (
-                <div className="w-full mt-8 p-6 bg-indigo-500 rounded-xl shadow-lg flex items-center space-x-4">
+                <><Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src={randomImg} width={1000} height={1000} /><div className="w-full mt-8 p-6 bg-indigo-500 rounded-xl shadow-lg flex items-center space-x-4">
                     <div className="shrink-0">
                         <p className="text-7xl">🚀</p>
                     </div>
@@ -84,10 +92,11 @@ const Debat = () => {
                         <div className="text-xl font-medium text-white">오늘의 주제</div>
                         <p className="text-white dark:text-white">{result.topic}! 🙇‍♀️</p>
                     </div>
-                </div>
+                </div></>
             )}
 
             { response && (<>
+                <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src={randomImg} width={1000} height={1000}/>
                 <div className="w-full mt-8 p-6 bg-indigo-500 rounded-xl shadow-lg flex items-center space-x-4">
                     <div className="shrink-0">
                         <p className="text-7xl">🤖</p>
@@ -111,7 +120,6 @@ const Debat = () => {
                 </form>
             </div>
             </div>
-
             {running && (
             <Loading />
             )}

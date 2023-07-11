@@ -26,7 +26,7 @@ const RecapBox = () => {
 
             // 수정해야 햄... 왜 안 되는 거쥐...
             await axios.post(
-                'http://117.16.43.105:8001/recap',
+                'http://localhost:80/recap',
                 JSONdata,
                 {
                     headers: {

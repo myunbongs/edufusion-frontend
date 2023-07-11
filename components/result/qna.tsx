@@ -41,7 +41,7 @@ const QnA = () => {
 
             // 수정해야 햄... 왜 안 되는 거쥐...
             await axios.post(
-                'http://117.16.43.105:8001/answer',
+                'http://localhost:80/answer',
                 JSONdata,
                 {
                     headers: {

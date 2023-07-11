@@ -17,7 +17,7 @@ export default function ChoiceBox() {
         return num;
     }
 
-    const randomImg = "/" + name + "/" + String(random(0, 10)) + '.png';
+    const randomImg = "/" + name + "/" + '0.png';
     
     const handleSubmit = async (event) => {
         router.push(
@@ -33,6 +33,16 @@ export default function ChoiceBox() {
 
     return (<>
         <div className="flex flex-col">
+
+        <div className="w-full mb-16 p-6 bg-indigo-500 rounded-xl shadow-lg flex items-center space-x-4">
+            <div className="shrink-0">
+                <p className="text-7xl">🖱</p>
+            </div>
+            <div>
+                <div className="text-xl font-medium text-white">원하는 기능을 클릭하세요!</div>
+                <p className="text-white dark:text-white">Edufusion의 All-in-one 서비스를 경험해보세요 💕</p>
+            </div>
+        </div>
 
         <Image alt="tutor talking" className="rounded-lg sm:mb-0 mb-4" src={randomImg} width={1000} height={1000}/>
 

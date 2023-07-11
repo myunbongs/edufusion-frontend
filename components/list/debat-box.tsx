@@ -26,7 +26,7 @@ const DebatBox = () => {
 
             // 수정해야 햄... 왜 안 되는 거쥐...
             await axios.post(
-                'http://117.16.43.105:8001/debat',
+                'http://localhost:80/debat',
                 JSONdata,
                 {
                     headers: {

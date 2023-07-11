@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 const Celebration = () => {
     const {query} = useRouter(); 
     const name = query.name as string;
-    let randomImg = "/" + name + "/" + '10.png';
+    let randomImg = "/" + name + "/" + '9.png';
 
     return (<>
         <div className="w-full flex flex-col">
